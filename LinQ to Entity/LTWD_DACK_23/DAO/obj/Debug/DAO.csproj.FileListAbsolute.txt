@@ -1,0 +1,12 @@
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\EntityFramework.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\EntityFramework.SqlServer.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\EntityFramework.xml
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\bin\Debug\EntityFramework.SqlServer.xml
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\obj\Debug\DAO.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to Entity\LTWD_DACK_23\DAO\obj\Debug\DAO.pdb

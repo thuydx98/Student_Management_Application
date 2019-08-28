@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f035a88117d54d6a956a68773783e4c0" Name="Diagram1">
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.CHUYENNGANH" Width="1.5" PointX="1.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.DIEMTHI" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.DSSV_HDRENLYEN" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.GIANGVIEN" Width="1.5" PointX="1.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.HDCTXH" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.HDRENLUYEN" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.HOCPHAN" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.KHOA" Width="1.5" PointX="1.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.LOP" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.MONHOC" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.SINHVIEN" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.TAIKHOAN" Width="1.5" PointX="7.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuanLySinhVienModel.VIPHAM" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_CHUYENNGANH_KHOA" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_LOP_CHUYENNGANH" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_DIEMTHI_HOCPHAN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_DIEMTHI_SINHVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_DSSV_HDRENLYEN_HDRENLUYEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_DSSV_HDRENLYEN_SINHVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_GIANGVIEN_KHOA" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_HOCPHAN_GIANGVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_KHOA_GIANGVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_HOCPHAN_MONHOC" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_SINHVIEN_LOP" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.FK_VIPHAM_SINHVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuanLySinhVienModel.DSSV_HDCTXH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

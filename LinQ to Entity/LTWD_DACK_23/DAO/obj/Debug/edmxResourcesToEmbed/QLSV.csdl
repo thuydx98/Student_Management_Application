@@ -1,0 +1,1097 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBQuanLySinhVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CHUYENNGANH">
+    <Key>
+      <PropertyRef Name="MaChuyenNganh" />
+    </Key>
+    <Property Name="MaChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenChuyenNganh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KHOA" Relationship="Self.FK_CHUYENNGANH_KHOA" FromRole="CHUYENNGANH" ToRole="KHOA" />
+    <NavigationProperty Name="LOPs" Relationship="Self.FK_LOP_CHUYENNGANH" FromRole="CHUYENNGANH" ToRole="LOP" />
+  </EntityType>
+  <EntityType Name="DIEMTHI">
+    <Key>
+      <PropertyRef Name="MaSV" />
+      <PropertyRef Name="MaHP" />
+    </Key>
+    <Property Name="MaSV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaHP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DiemGiuaKy" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiemCuoiKy" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DaDongHP" Type="Boolean" />
+    <NavigationProperty Name="HOCPHAN" Relationship="Self.FK_DIEMTHI_HOCPHAN" FromRole="DIEMTHI" ToRole="HOCPHAN" />
+    <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_DIEMTHI_SINHVIEN" FromRole="DIEMTHI" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="DSSV_HDRENLYEN">
+    <Key>
+      <PropertyRef Name="MaSV" />
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaSV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaHD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoThamGia" Type="Boolean" />
+    <NavigationProperty Name="HDRENLUYEN" Relationship="Self.FK_DSSV_HDRENLYEN_HDRENLUYEN" FromRole="DSSV_HDRENLYEN" ToRole="HDRENLUYEN" />
+    <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_DSSV_HDRENLYEN_SINHVIEN" FromRole="DSSV_HDRENLYEN" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="GIANGVIEN">
+    <Key>
+      <PropertyRef Name="MaGV" />
+    </Key>
+    <Property Name="MaGV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenGV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThuocMaKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HocVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KHOA" Relationship="Self.FK_GIANGVIEN_KHOA" FromRole="GIANGVIEN" ToRole="KHOA" />
+    <NavigationProperty Name="HOCPHANs" Relationship="Self.FK_HOCPHAN_GIANGVIEN" FromRole="GIANGVIEN" ToRole="HOCPHAN" />
+    <NavigationProperty Name="KHOAs" Relationship="Self.FK_KHOA_GIANGVIEN" FromRole="GIANGVIEN" ToRole="KHOA" />
+  </EntityType>
+  <EntityType Name="HDCTXH">
+    <Key>
+      <PropertyRef Name="MaHDCTXH" />
+    </Key>
+    <Property Name="MaHDCTXH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenHDCTXH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaDiem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTC" Type="DateTime" Precision="0" />
+    <Property Name="SoDiemCTXH" Type="Int32" />
+    <NavigationProperty Name="SINHVIENs" Relationship="Self.DSSV_HDCTXH" FromRole="HDCTXH" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="HDRENLUYEN">
+    <Key>
+      <PropertyRef Name="MaHDRL" />
+    </Key>
+    <Property Name="MaHDRL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenHDRL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaDiem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTC" Type="DateTime" Precision="0" />
+    <Property Name="NamHoc" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="HocKy" Type="Int32" />
+    <Property Name="SoDiemRL" Type="Int32" />
+    <NavigationProperty Name="DSSV_HDRENLYEN" Relationship="Self.FK_DSSV_HDRENLYEN_HDRENLUYEN" FromRole="HDRENLUYEN" ToRole="DSSV_HDRENLYEN" />
+  </EntityType>
+  <EntityType Name="HOCPHAN">
+    <Key>
+      <PropertyRef Name="MaHP" />
+    </Key>
+    <Property Name="MaHP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaMH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HocKy" Type="Int32" />
+    <Property Name="NamHoc" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="MaGV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SoTC" Type="Int32" />
+    <Property Name="HocPhi" Type="Int32" />
+    <NavigationProperty Name="DIEMTHIs" Relationship="Self.FK_DIEMTHI_HOCPHAN" FromRole="HOCPHAN" ToRole="DIEMTHI" />
+    <NavigationProperty Name="GIANGVIEN" Relationship="Self.FK_HOCPHAN_GIANGVIEN" FromRole="HOCPHAN" ToRole="GIANGVIEN" />
+    <NavigationProperty Name="MONHOC" Relationship="Self.FK_HOCPHAN_MONHOC" FromRole="HOCPHAN" ToRole="MONHOC" />
+  </EntityType>
+  <EntityType Name="KHOA">
+    <Key>
+      <PropertyRef Name="MaKhoa" />
+    </Key>
+    <Property Name="MaKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CNKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDTKhoa" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CHUYENNGANHs" Relationship="Self.FK_CHUYENNGANH_KHOA" FromRole="KHOA" ToRole="CHUYENNGANH" />
+    <NavigationProperty Name="GIANGVIENs" Relationship="Self.FK_GIANGVIEN_KHOA" FromRole="KHOA" ToRole="GIANGVIEN" />
+    <NavigationProperty Name="GIANGVIEN" Relationship="Self.FK_KHOA_GIANGVIEN" FromRole="KHOA" ToRole="GIANGVIEN" />
+  </EntityType>
+  <EntityType Name="LOP">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CHUYENNGANH1" Relationship="Self.FK_LOP_CHUYENNGANH" FromRole="LOP" ToRole="CHUYENNGANH" />
+    <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SINHVIEN_LOP" FromRole="LOP" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="MONHOC">
+    <Key>
+      <PropertyRef Name="MaMH" />
+    </Key>
+    <Property Name="MaMH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HOCPHANs" Relationship="Self.FK_HOCPHAN_MONHOC" FromRole="MONHOC" ToRole="HOCPHAN" />
+  </EntityType>
+  <EntityType Name="SINHVIEN">
+    <Key>
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Name="MaSV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DanToc" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaLop" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DIEMTHIs" Relationship="Self.FK_DIEMTHI_SINHVIEN" FromRole="SINHVIEN" ToRole="DIEMTHI" />
+    <NavigationProperty Name="DSSV_HDRENLYEN" Relationship="Self.FK_DSSV_HDRENLYEN_SINHVIEN" FromRole="SINHVIEN" ToRole="DSSV_HDRENLYEN" />
+    <NavigationProperty Name="LOP" Relationship="Self.FK_SINHVIEN_LOP" FromRole="SINHVIEN" ToRole="LOP" />
+    <NavigationProperty Name="VIPHAMs" Relationship="Self.FK_VIPHAM_SINHVIEN" FromRole="SINHVIEN" ToRole="VIPHAM" />
+    <NavigationProperty Name="HDCTXHs" Relationship="Self.DSSV_HDCTXH" FromRole="SINHVIEN" ToRole="HDCTXH" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="TaiKhoan1" />
+    </Key>
+    <Property Name="TaiKhoan1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoaiUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIPHAM">
+    <Key>
+      <PropertyRef Name="MaSV" />
+      <PropertyRef Name="NoiDung" />
+      <PropertyRef Name="HinhThucKL" />
+      <PropertyRef Name="NgayViPham" />
+    </Key>
+    <Property Name="MaSV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HinhThucKL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayViPham" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_VIPHAM_SINHVIEN" FromRole="VIPHAM" ToRole="SINHVIEN" />
+  </EntityType>
+  <Association Name="FK_CHUYENNGANH_KHOA">
+    <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
+    <End Role="CHUYENNGANH" Type="Self.CHUYENNGANH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHOA">
+        <PropertyRef Name="MaKhoa" />
+      </Principal>
+      <Dependent Role="CHUYENNGANH">
+        <PropertyRef Name="MaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOP_CHUYENNGANH">
+    <End Role="CHUYENNGANH" Type="Self.CHUYENNGANH" Multiplicity="0..1" />
+    <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUYENNGANH">
+        <PropertyRef Name="MaChuyenNganh" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="ChuyenNganh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMTHI_HOCPHAN">
+    <End Role="HOCPHAN" Type="Self.HOCPHAN" Multiplicity="1" />
+    <End Role="DIEMTHI" Type="Self.DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOCPHAN">
+        <PropertyRef Name="MaHP" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="MaHP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMTHI_SINHVIEN">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="DIEMTHI" Type="Self.DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSSV_HDRENLYEN_HDRENLUYEN">
+    <End Role="HDRENLUYEN" Type="Self.HDRENLUYEN" Multiplicity="1" />
+    <End Role="DSSV_HDRENLYEN" Type="Self.DSSV_HDRENLYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HDRENLUYEN">
+        <PropertyRef Name="MaHDRL" />
+      </Principal>
+      <Dependent Role="DSSV_HDRENLYEN">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSSV_HDRENLYEN_SINHVIEN">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="DSSV_HDRENLYEN" Type="Self.DSSV_HDRENLYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="DSSV_HDRENLYEN">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GIANGVIEN_KHOA">
+    <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
+    <End Role="GIANGVIEN" Type="Self.GIANGVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHOA">
+        <PropertyRef Name="MaKhoa" />
+      </Principal>
+      <Dependent Role="GIANGVIEN">
+        <PropertyRef Name="ThuocMaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOCPHAN_GIANGVIEN">
+    <End Role="GIANGVIEN" Type="Self.GIANGVIEN" Multiplicity="0..1" />
+    <End Role="HOCPHAN" Type="Self.HOCPHAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GIANGVIEN">
+        <PropertyRef Name="MaGV" />
+      </Principal>
+      <Dependent Role="HOCPHAN">
+        <PropertyRef Name="MaGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHOA_GIANGVIEN">
+    <End Role="GIANGVIEN" Type="Self.GIANGVIEN" Multiplicity="0..1" />
+    <End Role="KHOA" Type="Self.KHOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GIANGVIEN">
+        <PropertyRef Name="MaGV" />
+      </Principal>
+      <Dependent Role="KHOA">
+        <PropertyRef Name="CNKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOCPHAN_MONHOC">
+    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="0..1" />
+    <End Role="HOCPHAN" Type="Self.HOCPHAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONHOC">
+        <PropertyRef Name="MaMH" />
+      </Principal>
+      <Dependent Role="HOCPHAN">
+        <PropertyRef Name="MaMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SINHVIEN_LOP">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="0..1" />
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="MaLop" />
+      </Principal>
+      <Dependent Role="SINHVIEN">
+        <PropertyRef Name="MaLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIPHAM_SINHVIEN">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="VIPHAM" Type="Self.VIPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="VIPHAM">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSSV_HDCTXH">
+    <End Role="HDCTXH" Type="Self.HDCTXH" Multiplicity="*" />
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DBQuanLySinhVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHUYENNGANHs" EntityType="Self.CHUYENNGANH" />
+    <EntitySet Name="DIEMTHIs" EntityType="Self.DIEMTHI" />
+    <EntitySet Name="DSSV_HDRENLYEN" EntityType="Self.DSSV_HDRENLYEN" />
+    <EntitySet Name="GIANGVIENs" EntityType="Self.GIANGVIEN" />
+    <EntitySet Name="HDCTXHs" EntityType="Self.HDCTXH" />
+    <EntitySet Name="HDRENLUYENs" EntityType="Self.HDRENLUYEN" />
+    <EntitySet Name="HOCPHANs" EntityType="Self.HOCPHAN" />
+    <EntitySet Name="KHOAs" EntityType="Self.KHOA" />
+    <EntitySet Name="LOPs" EntityType="Self.LOP" />
+    <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+    <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
+    <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+    <EntitySet Name="VIPHAMs" EntityType="Self.VIPHAM" />
+    <AssociationSet Name="FK_CHUYENNGANH_KHOA" Association="Self.FK_CHUYENNGANH_KHOA">
+      <End Role="KHOA" EntitySet="KHOAs" />
+      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOP_CHUYENNGANH" Association="Self.FK_LOP_CHUYENNGANH">
+      <End Role="CHUYENNGANH" EntitySet="CHUYENNGANHs" />
+      <End Role="LOP" EntitySet="LOPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMTHI_HOCPHAN" Association="Self.FK_DIEMTHI_HOCPHAN">
+      <End Role="HOCPHAN" EntitySet="HOCPHANs" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMTHI_SINHVIEN" Association="Self.FK_DIEMTHI_SINHVIEN">
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSSV_HDRENLYEN_HDRENLUYEN" Association="Self.FK_DSSV_HDRENLYEN_HDRENLUYEN">
+      <End Role="HDRENLUYEN" EntitySet="HDRENLUYENs" />
+      <End Role="DSSV_HDRENLYEN" EntitySet="DSSV_HDRENLYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSSV_HDRENLYEN_SINHVIEN" Association="Self.FK_DSSV_HDRENLYEN_SINHVIEN">
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+      <End Role="DSSV_HDRENLYEN" EntitySet="DSSV_HDRENLYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GIANGVIEN_KHOA" Association="Self.FK_GIANGVIEN_KHOA">
+      <End Role="KHOA" EntitySet="KHOAs" />
+      <End Role="GIANGVIEN" EntitySet="GIANGVIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOCPHAN_GIANGVIEN" Association="Self.FK_HOCPHAN_GIANGVIEN">
+      <End Role="GIANGVIEN" EntitySet="GIANGVIENs" />
+      <End Role="HOCPHAN" EntitySet="HOCPHANs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHOA_GIANGVIEN" Association="Self.FK_KHOA_GIANGVIEN">
+      <End Role="GIANGVIEN" EntitySet="GIANGVIENs" />
+      <End Role="KHOA" EntitySet="KHOAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOCPHAN_MONHOC" Association="Self.FK_HOCPHAN_MONHOC">
+      <End Role="MONHOC" EntitySet="MONHOCs" />
+      <End Role="HOCPHAN" EntitySet="HOCPHANs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SINHVIEN_LOP" Association="Self.FK_SINHVIEN_LOP">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIPHAM_SINHVIEN" Association="Self.FK_VIPHAM_SINHVIEN">
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+      <End Role="VIPHAM" EntitySet="VIPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="DSSV_HDCTXH" Association="Self.DSSV_HDCTXH">
+      <End Role="HDCTXH" EntitySet="HDCTXHs" />
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBQuanLySinhVienModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBQuanLySinhVienModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spGetChuyenNganh" ReturnType="Collection(DBQuanLySinhVienModel.spGetChuyenNganh_Result)" />
+    <FunctionImport Name="spGetCNTheoKhoa" ReturnType="Collection(DBQuanLySinhVienModel.spGetCNTheoKhoa_Result)">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetCNTheoMaCN" ReturnType="Collection(DBQuanLySinhVienModel.spGetCNTheoMaCN_Result)">
+      <Parameter Name="maCN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDiemTB_SoTC" ReturnType="Collection(DBQuanLySinhVienModel.spGetDiemTB_SoTC_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDiemTBTL_SoTCTL" ReturnType="Collection(DBQuanLySinhVienModel.spGetDiemTBTL_SoTCTL_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDiemTheoMSSV" ReturnType="Collection(DBQuanLySinhVienModel.spGetDiemTheoMSSV_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDiemTheoMSSV_MaHP" ReturnType="Collection(DBQuanLySinhVienModel.spGetDiemTheoMSSV_MaHP_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="maHP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDSSVCanhBaoHV" ReturnType="Collection(DBQuanLySinhVienModel.spGetDSSVCanhBaoHV_Result)" />
+    <FunctionImport Name="spGetGVTheoMaGV" ReturnType="Collection(DBQuanLySinhVienModel.spGetGVTheoMaGV_Result)">
+      <Parameter Name="maGV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetGVTheoMaKhoa" ReturnType="Collection(DBQuanLySinhVienModel.spGetGVTheoMaKhoa_Result)">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHBGioi_NamHoc_HocKy" ReturnType="Collection(DBQuanLySinhVienModel.spGetHBGioi_NamHoc_HocKy_Result)">
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHBKha_NamHoc_HocKy" ReturnType="Collection(DBQuanLySinhVienModel.spGetHBKha_NamHoc_HocKy_Result)">
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHBNhatLop_NamHoc_HocKy" ReturnType="Collection(DBQuanLySinhVienModel.spGetHBNhatLop_NamHoc_HocKy_Result)">
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spgetHDByMaHD" ReturnType="Collection(DBQuanLySinhVienModel.spgetHDByMaHD_Result)">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHDCTXHByMaSV" ReturnType="Collection(DBQuanLySinhVienModel.spGetHDCTXHByMaSV_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHDRLByMaHD" ReturnType="Collection(DBQuanLySinhVienModel.spGetHDRLByMaHD_Result)">
+      <Parameter Name="MaHD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHDRLByMaSV_NamHoc_HocKy" ReturnType="Collection(DBQuanLySinhVienModel.spGetHDRLByMaSV_NamHoc_HocKy_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHocKy" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="spGetHPByMaSV" ReturnType="Collection(DBQuanLySinhVienModel.spGetHPByMaSV_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHPTheoMaHP" ReturnType="Collection(DBQuanLySinhVienModel.spGetHPTheoMaHP_Result)">
+      <Parameter Name="maHP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetHPTheoMH" ReturnType="Collection(DBQuanLySinhVienModel.spGetHPTheoMH_Result)">
+      <Parameter Name="maMH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetKhoa" ReturnType="Collection(DBQuanLySinhVienModel.spGetKhoa_Result)" />
+    <FunctionImport Name="spGetKTheoMaKhoa" ReturnType="Collection(DBQuanLySinhVienModel.spGetKTheoMaKhoa_Result)">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetLop" ReturnType="Collection(DBQuanLySinhVienModel.spGetLop_Result)" />
+    <FunctionImport Name="spGetLopTheoChuyenNganh" ReturnType="Collection(DBQuanLySinhVienModel.spGetLopTheoChuyenNganh_Result)">
+      <Parameter Name="maCN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetLopTheoMaLop" ReturnType="Collection(DBQuanLySinhVienModel.spGetLopTheoMaLop_Result)">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetMaGV" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetMaHDCTXH" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetMaHDRL" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetMHTheoMaMH" ReturnType="Collection(DBQuanLySinhVienModel.spGetMHTheoMaMH_Result)">
+      <Parameter Name="maMH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetMHTrongHP" ReturnType="Collection(DBQuanLySinhVienModel.spGetMHTrongHP_Result)" />
+    <FunctionImport Name="spGetMHTrongHPTheoGV" ReturnType="Collection(DBQuanLySinhVienModel.spGetMHTrongHPTheoGV_Result)">
+      <Parameter Name="maGV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetMonHoc" ReturnType="Collection(DBQuanLySinhVienModel.spGetMonHoc_Result)" />
+    <FunctionImport Name="spGetMSSV" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetNamHoc" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetSiSoLop" ReturnType="Collection(Int32)">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVByMaCTXH" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVByMaCTXH_Result)">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVByMaRL" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVByMaRL_Result)">
+      <Parameter Name="MaHD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVByMaSV_MaHDCTXH" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVByMaSV_MaHDCTXH_Result)">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVByMaSV_MaHDRL" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVByMaSV_MaHDRL_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVNoHocPhi" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVNoHocPhi_Result)" />
+    <FunctionImport Name="spGetSVTheoMaHP" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVTheoMaHP_Result)">
+      <Parameter Name="maHP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVTheoMaLop" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVTheoMaLop_Result)">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVTheoMaSV" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVTheoMaSV_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSVThieuDiemCTXH" ReturnType="Collection(DBQuanLySinhVienModel.spGetSVThieuDiemCTXH_Result)" />
+    <FunctionImport Name="spGetTaiKhoan" ReturnType="Collection(DBQuanLySinhVienModel.spGetTaiKhoan_Result)" />
+    <FunctionImport Name="spGetTKTheoLoaiUser" ReturnType="Collection(DBQuanLySinhVienModel.spGetTKTheoLoaiUser_Result)">
+      <Parameter Name="loaiUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTKTheoMa" ReturnType="Collection(DBQuanLySinhVienModel.spGetTKTheoMa_Result)">
+      <Parameter Name="ma" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTKTheoTK" ReturnType="Collection(DBQuanLySinhVienModel.spGetTKTheoTK_Result)">
+      <Parameter Name="user" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTongDiemCongRLByMaSV_NamHoc_HocKy" ReturnType="Collection(Int32)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTongDiemHDCTXHByMaSV" ReturnType="Collection(Int32)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTongDiemTruRLByMaSV_NamHoc_HocKy" ReturnType="Collection(Int32)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetTongNoHPByMaSV" ReturnType="Collection(Int32)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetUserByIDPass" ReturnType="Collection(DBQuanLySinhVienModel.spGetUserByIDPass_Result)">
+      <Parameter Name="user" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetViPham" ReturnType="Collection(DBQuanLySinhVienModel.spGetViPham_Result)" />
+    <FunctionImport Name="spGetVPByAllKey" ReturnType="Collection(DBQuanLySinhVienModel.spGetVPByAllKey_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="noiDung" Mode="In" Type="String" />
+      <Parameter Name="hinhthucKL" Mode="In" Type="String" />
+      <Parameter Name="ngayVP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spGetVPByMaSV" ReturnType="Collection(DBQuanLySinhVienModel.spGetVPByMaSV_Result)">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaChuyenNganh">
+      <Parameter Name="maCN" Mode="In" Type="String" />
+      <Parameter Name="tenChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaCTXH">
+      <Parameter Name="MaHDCTXH" Mode="In" Type="String" />
+      <Parameter Name="TenHDCTXH" Mode="In" Type="String" />
+      <Parameter Name="DiaDiem" Mode="In" Type="String" />
+      <Parameter Name="NgayTC" Mode="In" Type="DateTime" />
+      <Parameter Name="SoDiemCTXH" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaDiemThi">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="maHP" Mode="In" Type="String" />
+      <Parameter Name="diemGK" Mode="In" Type="Decimal" />
+      <Parameter Name="diemCK" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaGiangVien">
+      <Parameter Name="magv" Mode="In" Type="String" />
+      <Parameter Name="tengv" Mode="In" Type="String" />
+      <Parameter Name="thuocmakhoa" Mode="In" Type="String" />
+      <Parameter Name="hocvi" Mode="In" Type="String" />
+      <Parameter Name="diachi" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaHocPhan">
+      <Parameter Name="mahp" Mode="In" Type="String" />
+      <Parameter Name="mamh" Mode="In" Type="String" />
+      <Parameter Name="hocky" Mode="In" Type="Int32" />
+      <Parameter Name="namhoc" Mode="In" Type="String" />
+      <Parameter Name="magv" Mode="In" Type="String" />
+      <Parameter Name="sotc" Mode="In" Type="Int32" />
+      <Parameter Name="hocphi" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaKhoa">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+      <Parameter Name="tenKhoa" Mode="In" Type="String" />
+      <Parameter Name="truongKhoa" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaLop">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+      <Parameter Name="chuyenNganh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaMonHoc">
+      <Parameter Name="maMH" Mode="In" Type="String" />
+      <Parameter Name="tenMH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaRL">
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+      <Parameter Name="TenHDRL" Mode="In" Type="String" />
+      <Parameter Name="DiaDiem" Mode="In" Type="String" />
+      <Parameter Name="NgayTC" Mode="In" Type="DateTime" />
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+      <Parameter Name="SoDiemRL" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaSinhVien">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="hoTen" Mode="In" Type="String" />
+      <Parameter Name="diaChi" Mode="In" Type="String" />
+      <Parameter Name="ngaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioiTinh" Mode="In" Type="String" />
+      <Parameter Name="danToc" Mode="In" Type="String" />
+      <Parameter Name="queQuan" Mode="In" Type="String" />
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaTaiKhoan">
+      <Parameter Name="maTk" Mode="In" Type="String" />
+      <Parameter Name="matKhau" Mode="In" Type="String" />
+      <Parameter Name="loaiUser" Mode="In" Type="String" />
+      <Parameter Name="magv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSuaTinhTrangHP">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="maHP" Mode="In" Type="String" />
+      <Parameter Name="daDongHP" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spThemChuyenNganh">
+      <Parameter Name="maCN" Mode="In" Type="String" />
+      <Parameter Name="tenChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemCTXH">
+      <Parameter Name="MaHDCTXH" Mode="In" Type="String" />
+      <Parameter Name="TenHDCTXH" Mode="In" Type="String" />
+      <Parameter Name="DiaDiem" Mode="In" Type="String" />
+      <Parameter Name="NgayTC" Mode="In" Type="DateTime" />
+      <Parameter Name="SoDiemCTXH" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spThemDiemThi">
+      <Parameter Name="maHP" Mode="In" Type="String" />
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemDSSV_HDCTXH">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemDSSV_HDRL">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+      <Parameter Name="coMat" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spThemGiangVien">
+      <Parameter Name="magv" Mode="In" Type="String" />
+      <Parameter Name="tengv" Mode="In" Type="String" />
+      <Parameter Name="thuocmakhoa" Mode="In" Type="String" />
+      <Parameter Name="hocvi" Mode="In" Type="String" />
+      <Parameter Name="diachi" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemHocPhan">
+      <Parameter Name="mahp" Mode="In" Type="String" />
+      <Parameter Name="mamh" Mode="In" Type="String" />
+      <Parameter Name="hocky" Mode="In" Type="Int32" />
+      <Parameter Name="namhoc" Mode="In" Type="String" />
+      <Parameter Name="magv" Mode="In" Type="String" />
+      <Parameter Name="sotc" Mode="In" Type="Int32" />
+      <Parameter Name="hocphi" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spThemKhoa">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+      <Parameter Name="tenKhoa" Mode="In" Type="String" />
+      <Parameter Name="truongKhoa" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemLop">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+      <Parameter Name="chuyenNganh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemMonHoc">
+      <Parameter Name="maMH" Mode="In" Type="String" />
+      <Parameter Name="tenMH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemRL">
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+      <Parameter Name="TenHDRL" Mode="In" Type="String" />
+      <Parameter Name="DiaDiem" Mode="In" Type="String" />
+      <Parameter Name="NgayTC" Mode="In" Type="DateTime" />
+      <Parameter Name="namHoc" Mode="In" Type="String" />
+      <Parameter Name="hocKy" Mode="In" Type="Int32" />
+      <Parameter Name="SoDiemRL" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spThemSinhVien">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="hoTen" Mode="In" Type="String" />
+      <Parameter Name="diaChi" Mode="In" Type="String" />
+      <Parameter Name="ngaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioiTinh" Mode="In" Type="String" />
+      <Parameter Name="danToc" Mode="In" Type="String" />
+      <Parameter Name="queQuan" Mode="In" Type="String" />
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemTaiKhoan">
+      <Parameter Name="maTk" Mode="In" Type="String" />
+      <Parameter Name="matKhau" Mode="In" Type="String" />
+      <Parameter Name="loaiUser" Mode="In" Type="String" />
+      <Parameter Name="ma" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spThemViPham">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="noiDung" Mode="In" Type="String" />
+      <Parameter Name="hinhthucKL" Mode="In" Type="String" />
+      <Parameter Name="ngayVP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaChuyenNganh">
+      <Parameter Name="maCN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaCTXH">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaDiemThi">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="maHP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaDSSV_HDCTXH">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaDSSV_HDRL">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaGiangVien">
+      <Parameter Name="magv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaHocPhan">
+      <Parameter Name="mahp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaKhoa">
+      <Parameter Name="maKhoa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaLop">
+      <Parameter Name="maLop" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaMonHoc">
+      <Parameter Name="maMH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaRL">
+      <Parameter Name="MaHDRL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaSinhVien">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaTaiKhoan">
+      <Parameter Name="maTk" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spXoaViPham">
+      <Parameter Name="maSV" Mode="In" Type="String" />
+      <Parameter Name="noiDung" Mode="In" Type="String" />
+      <Parameter Name="hinhthucKL" Mode="In" Type="String" />
+      <Parameter Name="ngayVP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetChuyenNganh_Result">
+    <Property Type="String" Name="MaChuyenNganh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenChuyenNganh" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MaKhoa" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetCNTheoKhoa_Result">
+    <Property Type="String" Name="MaChuyenNganh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenChuyenNganh" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MaKhoa" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetCNTheoMaCN_Result">
+    <Property Type="String" Name="MaChuyenNganh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenChuyenNganh" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MaKhoa" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetDiemTB_SoTC_Result">
+    <Property Type="Decimal" Name="DTB" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetDiemTBTL_SoTCTL_Result">
+    <Property Type="Decimal" Name="DTBTL" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="SoTCTL" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetDiemTheoMSSV_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DanToc" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="QueQuan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaHP" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaMH" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="MaGV" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+    <Property Type="Int32" Name="HocPhi" Nullable="true" />
+    <Property Type="Boolean" Name="DaDongHP" Nullable="true" />
+    <Property Type="Decimal" Name="DiemCuoiKy" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DiemGiuaKy" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetDiemTheoMSSV_MaHP_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="MaHP" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="DiemGiuaKy" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DiemCuoiKy" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="DaDongHP" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetDSSVCanhBaoHV_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="DTB" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="spGetGVTheoMaGV_Result">
+    <Property Type="String" Name="MaGV" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenGV" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ThuocMaKhoa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HocVi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="spGetGVTheoMaKhoa_Result">
+    <Property Type="String" Name="MaGV" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenGV" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ThuocMaKhoa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HocVi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="spGetHBGioi_NamHoc_HocKy_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="DTB" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="spGetHBKha_NamHoc_HocKy_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="DTB" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="spGetHBNhatLop_NamHoc_HocKy_Result">
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="DTB" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="spgetHDByMaHD_Result">
+    <Property Type="String" Name="MaHDCTXH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenHDCTXH" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DiaDiem" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayTC" Nullable="true" />
+    <Property Type="Int32" Name="SoDiemCTXH" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHDCTXHByMaSV_Result">
+    <Property Type="String" Name="MaHDCTXH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenHDCTXH" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DiaDiem" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayTC" Nullable="true" />
+    <Property Type="Int32" Name="SoDiemCTXH" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHDRLByMaHD_Result">
+    <Property Type="String" Name="MaHDRL" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenHDRL" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaDiem" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayTC" Nullable="true" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="Int32" Name="SoDiemRL" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHDRLByMaSV_NamHoc_HocKy_Result">
+    <Property Type="String" Name="MaHDRL" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenHDRL" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaDiem" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayTC" Nullable="true" />
+    <Property Type="Int32" Name="SoDiemRL" Nullable="true" />
+    <Property Type="Boolean" Name="CoThamGia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHPByMaSV_Result">
+    <Property Type="String" Name="MaHP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MaGV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+    <Property Type="Int32" Name="HocPhi" Nullable="true" />
+    <Property Type="Boolean" Name="DaDongHP" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHPTheoMaHP_Result">
+    <Property Type="String" Name="MaHP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MaMH" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="MaGV" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+    <Property Type="Int32" Name="HocPhi" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetHPTheoMH_Result">
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="Int32" Name="HocPhi" Nullable="true" />
+    <Property Type="String" Name="MaGV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaHP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MaMH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaMH_MH" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetKhoa_Result">
+    <Property Type="String" Name="MaKhoa" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenKhoa" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CNKhoa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SDTKhoa" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="spGetKTheoMaKhoa_Result">
+    <Property Type="String" Name="MaKhoa" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenKhoa" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CNKhoa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SDTKhoa" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="spGetLop_Result">
+    <Property Type="String" Name="MaLop" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ChuyenNganh" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetLopTheoChuyenNganh_Result">
+    <Property Type="String" Name="MaLop" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ChuyenNganh" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetLopTheoMaLop_Result">
+    <Property Type="String" Name="MaLop" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ChuyenNganh" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetMHTheoMaMH_Result">
+    <Property Type="String" Name="MaMH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetMHTrongHP_Result">
+    <Property Type="String" Name="MaMH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetMHTrongHPTheoGV_Result">
+    <Property Type="String" Name="MaMH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetMonHoc_Result">
+    <Property Type="String" Name="MaMH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenMH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetSVByMaCTXH_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetSVByMaRL_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="CoThamGia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetSVByMaSV_MaHDCTXH_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="MaHDCTXH" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetSVByMaSV_MaHDRL_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="MaHD" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="CoThamGia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetSVNoHocPhi_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TongNoHP" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetSVTheoMaHP_Result">
+    <Property Type="String" Name="MaHP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MaMH" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HocKy" Nullable="true" />
+    <Property Type="String" Name="NamHoc" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="MaGV" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SoTC" Nullable="true" />
+    <Property Type="Int32" Name="HocPhi" Nullable="true" />
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DanToc" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="QueQuan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="DaDongHP" Nullable="true" />
+    <Property Type="Decimal" Name="DiemCuoiKy" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DiemGiuaKy" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="spGetSVTheoMaLop_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DanToc" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="QueQuan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetSVTheoMaSV_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DanToc" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="QueQuan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetSVThieuDiemCTXH_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLop" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TongDiemCTXH" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetTaiKhoan_Result">
+    <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LoaiUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetTKTheoLoaiUser_Result">
+    <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LoaiUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetTKTheoMa_Result">
+    <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LoaiUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetTKTheoTK_Result">
+    <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LoaiUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetUserByIDPass_Result">
+    <Property Type="String" Name="TaiKhoan" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MatKhau" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LoaiUser" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetViPham_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="NoiDung" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HinhThucKL" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="NgayViPham" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetVPByAllKey_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="NoiDung" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HinhThucKL" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="NgayViPham" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetVPByMaSV_Result">
+    <Property Type="String" Name="MaSV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="NoiDung" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HinhThucKL" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="NgayViPham" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,190 @@
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\bin\Debug\BUS.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\bin\Debug\BUS.pdb
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\bin\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\bin\Debug\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\bin\Debug\DAO.dll.config
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\obj\Debug\BUS.csproj.CopyComplete
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\obj\Debug\BUS.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\BUS\obj\Debug\BUS.pdb
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\bin\Debug\BUS.dll
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\bin\Debug\BUS.pdb
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\bin\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\bin\Debug\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\bin\Debug\DAO.dll.config
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\obj\Debug\BUS.csproj.CopyComplete
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\obj\Debug\BUS.dll
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\BUS\obj\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\bin\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\bin\Debug\BUS.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\obj\Debug\BUS.csproj.CopyComplete
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\obj\Debug\BUS.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\BUS\obj\Debug\BUS.pdb

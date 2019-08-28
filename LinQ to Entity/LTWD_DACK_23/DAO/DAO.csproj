@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23B46F37-1ACE-4F37-BC6C-8B921F1E2E13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAO</RootNamespace>
+    <AssemblyName>DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CHUYENNGANH.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIEMTHI.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSSV_HDRENLYEN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GIANGVIEN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HDCTXH.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HDRENLUYEN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOCPHAN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHOA.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOP.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MONHOC.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLSV.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSV.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLSV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSV.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SINHVIEN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetChuyenNganh_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetCNTheoKhoa_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetCNTheoMaCN_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetDiemTBTL_SoTCTL_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetDiemTB_SoTC_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetDiemTheoMSSV_MaHP_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetDiemTheoMSSV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetDSSVCanhBaoHV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetGVTheoMaGV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetGVTheoMaKhoa_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHBGioi_NamHoc_HocKy_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHBKha_NamHoc_HocKy_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHBNhatLop_NamHoc_HocKy_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spgetHDByMaHD_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHDCTXHByMaSV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHDRLByMaHD_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHDRLByMaSV_NamHoc_HocKy_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHPByMaSV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHPTheoMaHP_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetHPTheoMH_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetKhoa_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetKTheoMaKhoa_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetLopTheoChuyenNganh_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetLopTheoMaLop_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetLop_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetMHTheoMaMH_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetMHTrongHPTheoGV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetMHTrongHP_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetMonHoc_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVByMaCTXH_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVByMaRL_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVByMaSV_MaHDCTXH_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVByMaSV_MaHDRL_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVNoHocPhi_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVTheoMaHP_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVTheoMaLop_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVTheoMaSV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetSVThieuDiemCTXH_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetTaiKhoan_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetTKTheoLoaiUser_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetTKTheoMa_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetTKTheoTK_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetUserByIDPass_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetViPham_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetVPByAllKey_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetVPByMaSV_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAIKHOAN.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VIPHAM.cs">
+      <DependentUpon>QLSV.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="QLSV.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLSV.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLSV.edmx.diagram">
+      <DependentUpon>QLSV.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLSV.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSV.edmx</DependentUpon>
+      <LastGenOutput>QLSV.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLSV.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSV.edmx</DependentUpon>
+      <LastGenOutput>QLSV.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

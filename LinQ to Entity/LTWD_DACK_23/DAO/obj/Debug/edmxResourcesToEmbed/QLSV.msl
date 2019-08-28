@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBQuanLySinhVienModelStoreContainer" CdmEntityContainer="DBQuanLySinhVienEntities">
+    <EntitySetMapping Name="CHUYENNGANHs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.CHUYENNGANH">
+        <MappingFragment StoreEntitySet="CHUYENNGANH">
+          <ScalarProperty Name="MaChuyenNganh" ColumnName="MaChuyenNganh" />
+          <ScalarProperty Name="TenChuyenNganh" ColumnName="TenChuyenNganh" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIEMTHIs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.DIEMTHI">
+        <MappingFragment StoreEntitySet="DIEMTHI">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
+          <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+          <ScalarProperty Name="DaDongHP" ColumnName="DaDongHP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSSV_HDRENLYEN">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.DSSV_HDRENLYEN">
+        <MappingFragment StoreEntitySet="DSSV_HDRENLYEN">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="CoThamGia" ColumnName="CoThamGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIANGVIENs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.GIANGVIEN">
+        <MappingFragment StoreEntitySet="GIANGVIEN">
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="TenGV" ColumnName="TenGV" />
+          <ScalarProperty Name="ThuocMaKhoa" ColumnName="ThuocMaKhoa" />
+          <ScalarProperty Name="HocVi" ColumnName="HocVi" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDCTXHs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.HDCTXH">
+        <MappingFragment StoreEntitySet="HDCTXH">
+          <ScalarProperty Name="MaHDCTXH" ColumnName="MaHDCTXH" />
+          <ScalarProperty Name="TenHDCTXH" ColumnName="TenHDCTXH" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="SoDiemCTXH" ColumnName="SoDiemCTXH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDRENLUYENs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.HDRENLUYEN">
+        <MappingFragment StoreEntitySet="HDRENLUYEN">
+          <ScalarProperty Name="MaHDRL" ColumnName="MaHDRL" />
+          <ScalarProperty Name="TenHDRL" ColumnName="TenHDRL" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="SoDiemRL" ColumnName="SoDiemRL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOCPHANs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.HOCPHAN">
+        <MappingFragment StoreEntitySet="HOCPHAN">
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHOAs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.KHOA">
+        <MappingFragment StoreEntitySet="KHOA">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+          <ScalarProperty Name="CNKhoa" ColumnName="CNKhoa" />
+          <ScalarProperty Name="SDTKhoa" ColumnName="SDTKhoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOPs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.LOP">
+        <MappingFragment StoreEntitySet="LOP">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONHOCs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.MONHOC">
+        <MappingFragment StoreEntitySet="MONHOC">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.SINHVIEN">
+        <MappingFragment StoreEntitySet="SINHVIEN">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="TaiKhoan1" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIPHAMs">
+      <EntityTypeMapping TypeName="DBQuanLySinhVienModel.VIPHAM">
+        <MappingFragment StoreEntitySet="VIPHAM">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="HinhThucKL" ColumnName="HinhThucKL" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DSSV_HDCTXH" TypeName="DBQuanLySinhVienModel.DSSV_HDCTXH" StoreEntitySet="DSSV_HDCTXH">
+      <EndProperty Name="HDCTXH">
+        <ScalarProperty Name="MaHDCTXH" ColumnName="MaHDCTXH" />
+      </EndProperty>
+      <EndProperty Name="SINHVIEN">
+        <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DBQuanLySinhVienModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DBQuanLySinhVienModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DBQuanLySinhVienModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DBQuanLySinhVienModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DBQuanLySinhVienModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBQuanLySinhVienModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBQuanLySinhVienModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spGetChuyenNganh" FunctionName="DBQuanLySinhVienModel.Store.spGetChuyenNganh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetChuyenNganh_Result">
+          <ScalarProperty Name="MaChuyenNganh" ColumnName="MaChuyenNganh" />
+          <ScalarProperty Name="TenChuyenNganh" ColumnName="TenChuyenNganh" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetCNTheoKhoa" FunctionName="DBQuanLySinhVienModel.Store.spGetCNTheoKhoa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetCNTheoKhoa_Result">
+          <ScalarProperty Name="MaChuyenNganh" ColumnName="MaChuyenNganh" />
+          <ScalarProperty Name="TenChuyenNganh" ColumnName="TenChuyenNganh" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetCNTheoMaCN" FunctionName="DBQuanLySinhVienModel.Store.spGetCNTheoMaCN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetCNTheoMaCN_Result">
+          <ScalarProperty Name="MaChuyenNganh" ColumnName="MaChuyenNganh" />
+          <ScalarProperty Name="TenChuyenNganh" ColumnName="TenChuyenNganh" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDiemTB_SoTC" FunctionName="DBQuanLySinhVienModel.Store.spGetDiemTB_SoTC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetDiemTB_SoTC_Result">
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDiemTBTL_SoTCTL" FunctionName="DBQuanLySinhVienModel.Store.spGetDiemTBTL_SoTCTL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetDiemTBTL_SoTCTL_Result">
+          <ScalarProperty Name="DTBTL" ColumnName="DTBTL" />
+          <ScalarProperty Name="SoTCTL" ColumnName="SoTCTL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDiemTheoMSSV" FunctionName="DBQuanLySinhVienModel.Store.spGetDiemTheoMSSV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetDiemTheoMSSV_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+          <ScalarProperty Name="DaDongHP" ColumnName="DaDongHP" />
+          <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+          <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDiemTheoMSSV_MaHP" FunctionName="DBQuanLySinhVienModel.Store.spGetDiemTheoMSSV_MaHP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetDiemTheoMSSV_MaHP_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
+          <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+          <ScalarProperty Name="DaDongHP" ColumnName="DaDongHP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDSSVCanhBaoHV" FunctionName="DBQuanLySinhVienModel.Store.spGetDSSVCanhBaoHV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetDSSVCanhBaoHV_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGVTheoMaGV" FunctionName="DBQuanLySinhVienModel.Store.spGetGVTheoMaGV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetGVTheoMaGV_Result">
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="TenGV" ColumnName="TenGV" />
+          <ScalarProperty Name="ThuocMaKhoa" ColumnName="ThuocMaKhoa" />
+          <ScalarProperty Name="HocVi" ColumnName="HocVi" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGVTheoMaKhoa" FunctionName="DBQuanLySinhVienModel.Store.spGetGVTheoMaKhoa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetGVTheoMaKhoa_Result">
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="TenGV" ColumnName="TenGV" />
+          <ScalarProperty Name="ThuocMaKhoa" ColumnName="ThuocMaKhoa" />
+          <ScalarProperty Name="HocVi" ColumnName="HocVi" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHBGioi_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetHBGioi_NamHoc_HocKy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHBGioi_NamHoc_HocKy_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHBKha_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetHBKha_NamHoc_HocKy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHBKha_NamHoc_HocKy_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHBNhatLop_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetHBNhatLop_NamHoc_HocKy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHBNhatLop_NamHoc_HocKy_Result">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spgetHDByMaHD" FunctionName="DBQuanLySinhVienModel.Store.spgetHDByMaHD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spgetHDByMaHD_Result">
+          <ScalarProperty Name="MaHDCTXH" ColumnName="MaHDCTXH" />
+          <ScalarProperty Name="TenHDCTXH" ColumnName="TenHDCTXH" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="SoDiemCTXH" ColumnName="SoDiemCTXH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHDCTXHByMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetHDCTXHByMaSV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHDCTXHByMaSV_Result">
+          <ScalarProperty Name="MaHDCTXH" ColumnName="MaHDCTXH" />
+          <ScalarProperty Name="TenHDCTXH" ColumnName="TenHDCTXH" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="SoDiemCTXH" ColumnName="SoDiemCTXH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHDRLByMaHD" FunctionName="DBQuanLySinhVienModel.Store.spGetHDRLByMaHD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHDRLByMaHD_Result">
+          <ScalarProperty Name="MaHDRL" ColumnName="MaHDRL" />
+          <ScalarProperty Name="TenHDRL" ColumnName="TenHDRL" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="SoDiemRL" ColumnName="SoDiemRL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHDRLByMaSV_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetHDRLByMaSV_NamHoc_HocKy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHDRLByMaSV_NamHoc_HocKy_Result">
+          <ScalarProperty Name="MaHDRL" ColumnName="MaHDRL" />
+          <ScalarProperty Name="TenHDRL" ColumnName="TenHDRL" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="SoDiemRL" ColumnName="SoDiemRL" />
+          <ScalarProperty Name="CoThamGia" ColumnName="CoThamGia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetHocKy" />
+    <FunctionImportMapping FunctionImportName="spGetHPByMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetHPByMaSV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHPByMaSV_Result">
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+          <ScalarProperty Name="DaDongHP" ColumnName="DaDongHP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHPTheoMaHP" FunctionName="DBQuanLySinhVienModel.Store.spGetHPTheoMaHP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHPTheoMaHP_Result">
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetHPTheoMH" FunctionName="DBQuanLySinhVienModel.Store.spGetHPTheoMH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetHPTheoMH_Result">
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+          <ScalarProperty Name="MaMH_MH" ColumnName="MaMH_MH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetKhoa" FunctionName="DBQuanLySinhVienModel.Store.spGetKhoa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetKhoa_Result">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+          <ScalarProperty Name="CNKhoa" ColumnName="CNKhoa" />
+          <ScalarProperty Name="SDTKhoa" ColumnName="SDTKhoa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetKTheoMaKhoa" FunctionName="DBQuanLySinhVienModel.Store.spGetKTheoMaKhoa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetKTheoMaKhoa_Result">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+          <ScalarProperty Name="CNKhoa" ColumnName="CNKhoa" />
+          <ScalarProperty Name="SDTKhoa" ColumnName="SDTKhoa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetLop" FunctionName="DBQuanLySinhVienModel.Store.spGetLop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetLop_Result">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetLopTheoChuyenNganh" FunctionName="DBQuanLySinhVienModel.Store.spGetLopTheoChuyenNganh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetLopTheoChuyenNganh_Result">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetLopTheoMaLop" FunctionName="DBQuanLySinhVienModel.Store.spGetLopTheoMaLop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetLopTheoMaLop_Result">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMaGV" FunctionName="DBQuanLySinhVienModel.Store.spGetMaGV" />
+    <FunctionImportMapping FunctionImportName="spGetMaHDCTXH" FunctionName="DBQuanLySinhVienModel.Store.spGetMaHDCTXH" />
+    <FunctionImportMapping FunctionImportName="spGetMaHDRL" FunctionName="DBQuanLySinhVienModel.Store.spGetMaHDRL" />
+    <FunctionImportMapping FunctionImportName="spGetMHTheoMaMH" FunctionName="DBQuanLySinhVienModel.Store.spGetMHTheoMaMH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetMHTheoMaMH_Result">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMHTrongHP" FunctionName="DBQuanLySinhVienModel.Store.spGetMHTrongHP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetMHTrongHP_Result">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMHTrongHPTheoGV" FunctionName="DBQuanLySinhVienModel.Store.spGetMHTrongHPTheoGV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetMHTrongHPTheoGV_Result">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMonHoc" FunctionName="DBQuanLySinhVienModel.Store.spGetMonHoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetMonHoc_Result">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetMSSV" FunctionName="DBQuanLySinhVienModel.Store.spGetMSSV" />
+    <FunctionImportMapping FunctionImportName="spGetNamHoc" FunctionName="DBQuanLySinhVienModel.Store.spGetNamHoc" />
+    <FunctionImportMapping FunctionImportName="spGetSiSoLop" FunctionName="DBQuanLySinhVienModel.Store.spGetSiSoLop" />
+    <FunctionImportMapping FunctionImportName="spGetSVByMaCTXH" FunctionName="DBQuanLySinhVienModel.Store.spGetSVByMaCTXH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVByMaCTXH_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVByMaRL" FunctionName="DBQuanLySinhVienModel.Store.spGetSVByMaRL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVByMaRL_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="CoThamGia" ColumnName="CoThamGia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVByMaSV_MaHDCTXH" FunctionName="DBQuanLySinhVienModel.Store.spGetSVByMaSV_MaHDCTXH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVByMaSV_MaHDCTXH_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaHDCTXH" ColumnName="MaHDCTXH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVByMaSV_MaHDRL" FunctionName="DBQuanLySinhVienModel.Store.spGetSVByMaSV_MaHDRL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVByMaSV_MaHDRL_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="CoThamGia" ColumnName="CoThamGia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVNoHocPhi" FunctionName="DBQuanLySinhVienModel.Store.spGetSVNoHocPhi">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVNoHocPhi_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="TongNoHP" ColumnName="TongNoHP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVTheoMaHP" FunctionName="DBQuanLySinhVienModel.Store.spGetSVTheoMaHP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVTheoMaHP_Result">
+          <ScalarProperty Name="MaHP" ColumnName="MaHP" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="SoTC" ColumnName="SoTC" />
+          <ScalarProperty Name="HocPhi" ColumnName="HocPhi" />
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="DaDongHP" ColumnName="DaDongHP" />
+          <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+          <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVTheoMaLop" FunctionName="DBQuanLySinhVienModel.Store.spGetSVTheoMaLop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVTheoMaLop_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVTheoMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetSVTheoMaSV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVTheoMaSV_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSVThieuDiemCTXH" FunctionName="DBQuanLySinhVienModel.Store.spGetSVThieuDiemCTXH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetSVThieuDiemCTXH_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="TongDiemCTXH" ColumnName="TongDiemCTXH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTaiKhoan" FunctionName="DBQuanLySinhVienModel.Store.spGetTaiKhoan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetTaiKhoan_Result">
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTKTheoLoaiUser" FunctionName="DBQuanLySinhVienModel.Store.spGetTKTheoLoaiUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetTKTheoLoaiUser_Result">
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTKTheoMa" FunctionName="DBQuanLySinhVienModel.Store.spGetTKTheoMa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetTKTheoMa_Result">
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTKTheoTK" FunctionName="DBQuanLySinhVienModel.Store.spGetTKTheoTK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetTKTheoTK_Result">
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetTongDiemCongRLByMaSV_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetTongDiemCongRLByMaSV_NamHoc_HocKy" />
+    <FunctionImportMapping FunctionImportName="spGetTongDiemHDCTXHByMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetTongDiemHDCTXHByMaSV" />
+    <FunctionImportMapping FunctionImportName="spGetTongDiemTruRLByMaSV_NamHoc_HocKy" FunctionName="DBQuanLySinhVienModel.Store.spGetTongDiemTruRLByMaSV_NamHoc_HocKy" />
+    <FunctionImportMapping FunctionImportName="spGetTongNoHPByMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetTongNoHPByMaSV" />
+    <FunctionImportMapping FunctionImportName="spGetUserByIDPass" FunctionName="DBQuanLySinhVienModel.Store.spGetUserByIDPass">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetUserByIDPass_Result">
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="LoaiUser" ColumnName="LoaiUser" />
+          <ScalarProperty Name="Ma" ColumnName="Ma" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetViPham" FunctionName="DBQuanLySinhVienModel.Store.spGetViPham">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetViPham_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="HinhThucKL" ColumnName="HinhThucKL" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetVPByAllKey" FunctionName="DBQuanLySinhVienModel.Store.spGetVPByAllKey">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetVPByAllKey_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="HinhThucKL" ColumnName="HinhThucKL" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetVPByMaSV" FunctionName="DBQuanLySinhVienModel.Store.spGetVPByMaSV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBQuanLySinhVienModel.spGetVPByMaSV_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="HinhThucKL" ColumnName="HinhThucKL" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSuaChuyenNganh" FunctionName="DBQuanLySinhVienModel.Store.spSuaChuyenNganh" />
+    <FunctionImportMapping FunctionImportName="spSuaCTXH" FunctionName="DBQuanLySinhVienModel.Store.spSuaCTXH" />
+    <FunctionImportMapping FunctionImportName="spSuaDiemThi" FunctionName="DBQuanLySinhVienModel.Store.spSuaDiemThi" />
+    <FunctionImportMapping FunctionImportName="spSuaGiangVien" FunctionName="DBQuanLySinhVienModel.Store.spSuaGiangVien" />
+    <FunctionImportMapping FunctionImportName="spSuaHocPhan" FunctionName="DBQuanLySinhVienModel.Store.spSuaHocPhan" />
+    <FunctionImportMapping FunctionImportName="spSuaKhoa" FunctionName="DBQuanLySinhVienModel.Store.spSuaKhoa" />
+    <FunctionImportMapping FunctionImportName="spSuaLop" FunctionName="DBQuanLySinhVienModel.Store.spSuaLop" />
+    <FunctionImportMapping FunctionImportName="spSuaMonHoc" FunctionName="DBQuanLySinhVienModel.Store.spSuaMonHoc" />
+    <FunctionImportMapping FunctionImportName="spSuaRL" FunctionName="DBQuanLySinhVienModel.Store.spSuaRL" />
+    <FunctionImportMapping FunctionImportName="spSuaSinhVien" FunctionName="DBQuanLySinhVienModel.Store.spSuaSinhVien" />
+    <FunctionImportMapping FunctionImportName="spSuaTaiKhoan" FunctionName="DBQuanLySinhVienModel.Store.spSuaTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="spSuaTinhTrangHP" FunctionName="DBQuanLySinhVienModel.Store.spSuaTinhTrangHP" />
+    <FunctionImportMapping FunctionImportName="spThemChuyenNganh" FunctionName="DBQuanLySinhVienModel.Store.spThemChuyenNganh" />
+    <FunctionImportMapping FunctionImportName="spThemCTXH" FunctionName="DBQuanLySinhVienModel.Store.spThemCTXH" />
+    <FunctionImportMapping FunctionImportName="spThemDiemThi" FunctionName="DBQuanLySinhVienModel.Store.spThemDiemThi" />
+    <FunctionImportMapping FunctionImportName="spThemDSSV_HDCTXH" FunctionName="DBQuanLySinhVienModel.Store.spThemDSSV_HDCTXH" />
+    <FunctionImportMapping FunctionImportName="spThemDSSV_HDRL" FunctionName="DBQuanLySinhVienModel.Store.spThemDSSV_HDRL" />
+    <FunctionImportMapping FunctionImportName="spThemGiangVien" FunctionName="DBQuanLySinhVienModel.Store.spThemGiangVien" />
+    <FunctionImportMapping FunctionImportName="spThemHocPhan" FunctionName="DBQuanLySinhVienModel.Store.spThemHocPhan" />
+    <FunctionImportMapping FunctionImportName="spThemKhoa" FunctionName="DBQuanLySinhVienModel.Store.spThemKhoa" />
+    <FunctionImportMapping FunctionImportName="spThemLop" FunctionName="DBQuanLySinhVienModel.Store.spThemLop" />
+    <FunctionImportMapping FunctionImportName="spThemMonHoc" FunctionName="DBQuanLySinhVienModel.Store.spThemMonHoc" />
+    <FunctionImportMapping FunctionImportName="spThemRL" FunctionName="DBQuanLySinhVienModel.Store.spThemRL" />
+    <FunctionImportMapping FunctionImportName="spThemSinhVien" FunctionName="DBQuanLySinhVienModel.Store.spThemSinhVien" />
+    <FunctionImportMapping FunctionImportName="spThemTaiKhoan" FunctionName="DBQuanLySinhVienModel.Store.spThemTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="spThemViPham" FunctionName="DBQuanLySinhVienModel.Store.spThemViPham" />
+    <FunctionImportMapping FunctionImportName="spXoaChuyenNganh" FunctionName="DBQuanLySinhVienModel.Store.spXoaChuyenNganh" />
+    <FunctionImportMapping FunctionImportName="spXoaCTXH" FunctionName="DBQuanLySinhVienModel.Store.spXoaCTXH" />
+    <FunctionImportMapping FunctionImportName="spXoaDiemThi" FunctionName="DBQuanLySinhVienModel.Store.spXoaDiemThi" />
+    <FunctionImportMapping FunctionImportName="spXoaDSSV_HDCTXH" FunctionName="DBQuanLySinhVienModel.Store.spXoaDSSV_HDCTXH" />
+    <FunctionImportMapping FunctionImportName="spXoaDSSV_HDRL" FunctionName="DBQuanLySinhVienModel.Store.spXoaDSSV_HDRL" />
+    <FunctionImportMapping FunctionImportName="spXoaGiangVien" FunctionName="DBQuanLySinhVienModel.Store.spXoaGiangVien" />
+    <FunctionImportMapping FunctionImportName="spXoaHocPhan" FunctionName="DBQuanLySinhVienModel.Store.spXoaHocPhan" />
+    <FunctionImportMapping FunctionImportName="spXoaKhoa" FunctionName="DBQuanLySinhVienModel.Store.spXoaKhoa" />
+    <FunctionImportMapping FunctionImportName="spXoaLop" FunctionName="DBQuanLySinhVienModel.Store.spXoaLop" />
+    <FunctionImportMapping FunctionImportName="spXoaMonHoc" FunctionName="DBQuanLySinhVienModel.Store.spXoaMonHoc" />
+    <FunctionImportMapping FunctionImportName="spXoaRL" FunctionName="DBQuanLySinhVienModel.Store.spXoaRL" />
+    <FunctionImportMapping FunctionImportName="spXoaSinhVien" FunctionName="DBQuanLySinhVienModel.Store.spXoaSinhVien" />
+    <FunctionImportMapping FunctionImportName="spXoaTaiKhoan" FunctionName="DBQuanLySinhVienModel.Store.spXoaTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="spXoaViPham" FunctionName="DBQuanLySinhVienModel.Store.spXoaViPham" />
+  </EntityContainerMapping>
+</Mapping>

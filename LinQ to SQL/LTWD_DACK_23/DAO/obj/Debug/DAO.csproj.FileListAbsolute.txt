@@ -1,0 +1,130 @@
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Debug\DAO.dll.config
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Debug\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Debug\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\bin\Debug\DAO.dll.config
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\bin\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\bin\Debug\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\obj\Debug\DAO.dll
+\\vmware-host\Shared Folders\Desktop\DACK\LTWD_DACK_5\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_6\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_7\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_8\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_9\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_10\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_11\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_13\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_14\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_15\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_17\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_21\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_21\DAO\obj\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\bin\Debug\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\bin\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\bin\Debug\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\obj\Debug\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\DACK_LTWD\LinQ to SQL\LTWD_DACK_22\DAO\obj\Debug\DAO.pdb

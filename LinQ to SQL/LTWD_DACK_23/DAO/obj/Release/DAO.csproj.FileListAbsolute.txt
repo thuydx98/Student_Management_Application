@@ -1,0 +1,32 @@
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Release\DAO.dll.config
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Release\DAO.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\bin\Release\DAO.pdb
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Release\DAO.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Release\DAO.dll
+\\vmware-host\Shared Folders\Desktop\LTWD_DACK_4\DAO\obj\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Release\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\bin\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_16\DAO\obj\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Release\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\bin\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_18\DAO\obj\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Release\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\bin\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_19\DAO\obj\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Release\DAO.dll.config
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\bin\Release\DAO.pdb
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Release\DAO.csprojAssemblyReference.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Release\DAO.dll
+Z:\XuanThuy On My Mac\Google Drive\LT Windows\C#\DACK\LTWD_DACK_20\DAO\obj\Release\DAO.pdb

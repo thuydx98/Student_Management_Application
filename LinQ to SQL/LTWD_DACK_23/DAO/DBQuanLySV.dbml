@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBQuanLySinhVien" Class="DBQuanLySVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=DBQuanLySinhVien;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="DBQuanLySinhVienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHUYENNGANH" Member="CHUYENNGANHs">
+    <Type Name="CHUYENNGANH">
+      <Column Name="MaChuyenNganh" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenChuyenNganh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CHUYENNGANH_LOP" Member="LOPs" ThisKey="MaChuyenNganh" OtherKey="ChuyenNganh" Type="LOP" />
+      <Association Name="KHOA_CHUYENNGANH" Member="KHOA" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="KHOA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VIPHAM" Member="VIPHAMs">
+    <Type Name="VIPHAM">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HinhThucKL" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NgayViPham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="SINHVIEN_VIPHAM" Member="SINHVIEN" ThisKey="MaSV" OtherKey="MaSV" Type="SINHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DSSV_HDRENLYEN" Member="DSSV_HDRENLYENs">
+    <Type Name="DSSV_HDRENLYEN">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHD" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="HDRENLUYEN_DSSV_HDRENLYEN" Member="HDRENLUYEN" ThisKey="MaHD" OtherKey="MaHDRL" Type="HDRENLUYEN" IsForeignKey="true" />
+      <Association Name="SINHVIEN_DSSV_HDRENLYEN" Member="SINHVIEN" ThisKey="MaSV" OtherKey="MaSV" Type="SINHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIANGVIEN" Member="GIANGVIENs">
+    <Type Name="GIANGVIEN">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThuocMaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocVi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Association Name="GIANGVIEN_HOCPHAN" Member="HOCPHANs" ThisKey="MaGV" OtherKey="MaGV" Type="HOCPHAN" />
+      <Association Name="GIANGVIEN_KHOA" Member="KHOAs" ThisKey="MaGV" OtherKey="CNKhoa" Type="KHOA" />
+      <Association Name="KHOA_GIANGVIEN" Member="KHOA" ThisKey="ThuocMaKhoa" OtherKey="MaKhoa" Type="KHOA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HDRENLUYEN" Member="HDRENLUYENs">
+    <Type Name="HDRENLUYEN">
+      <Column Name="MaHDRL" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHDRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoDiemRL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HDRENLUYEN_DSSV_HDRENLYEN" Member="DSSV_HDRENLYENs" ThisKey="MaHDRL" OtherKey="MaHD" Type="DSSV_HDRENLYEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCPHAN" Member="HOCPHANs">
+    <Type Name="HOCPHAN">
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaThanhToanHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HOCPHAN_DIEMTHI" Member="DIEMTHIs" ThisKey="MaHP" OtherKey="MaHP" Type="DIEMTHI" />
+      <Association Name="GIANGVIEN_HOCPHAN" Member="GIANGVIEN" ThisKey="MaGV" OtherKey="MaGV" Type="GIANGVIEN" IsForeignKey="true" />
+      <Association Name="MONHOC_HOCPHAN" Member="MONHOC" ThisKey="MaMH" OtherKey="MaMH" Type="MONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOA" Member="KHOAs">
+    <Type Name="KHOA">
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SDTKhoa" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Association Name="KHOA_CHUYENNGANH" Member="CHUYENNGANHs" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="CHUYENNGANH" />
+      <Association Name="KHOA_GIANGVIEN" Member="GIANGVIENs" ThisKey="MaKhoa" OtherKey="ThuocMaKhoa" Type="GIANGVIEN" />
+      <Association Name="GIANGVIEN_KHOA" Member="GIANGVIEN" ThisKey="CNKhoa" OtherKey="MaGV" Type="GIANGVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOP" Member="LOPs">
+    <Type Name="LOP">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChuyenNganh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LOP_SINHVIEN" Member="SINHVIENs" ThisKey="MaLop" OtherKey="MaLop" Type="SINHVIEN" />
+      <Association Name="CHUYENNGANH_LOP" Member="CHUYENNGANH1" ThisKey="ChuyenNganh" OtherKey="MaChuyenNganh" Type="CHUYENNGANH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MONHOC_HOCPHAN" Member="HOCPHANs" ThisKey="MaMH" OtherKey="MaMH" Type="HOCPHAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINHVIEN" Member="SINHVIENs">
+    <Type Name="SINHVIEN">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DanToc" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SINHVIEN_VIPHAM" Member="VIPHAMs" ThisKey="MaSV" OtherKey="MaSV" Type="VIPHAM" />
+      <Association Name="SINHVIEN_DSSV_HDRENLYEN" Member="DSSV_HDRENLYENs" ThisKey="MaSV" OtherKey="MaSV" Type="DSSV_HDRENLYEN" />
+      <Association Name="SINHVIEN_DIEMTHI" Member="DIEMTHIs" ThisKey="MaSV" OtherKey="MaSV" Type="DIEMTHI" />
+      <Association Name="SINHVIEN_DSSV_HDCTXH" Member="DSSV_HDCTXHs" ThisKey="MaSV" OtherKey="MaSV" Type="DSSV_HDCTXH" />
+      <Association Name="LOP_SINHVIEN" Member="LOP" ThisKey="MaLop" OtherKey="MaLop" Type="LOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="TaiKhoan" Member="TaiKhoan1" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIEMTHI" Member="DIEMTHIs">
+    <Type Name="DIEMTHI">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiemGiuaKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DaDongHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HOCPHAN_DIEMTHI" Member="HOCPHAN" ThisKey="MaHP" OtherKey="MaHP" Type="HOCPHAN" IsForeignKey="true" />
+      <Association Name="SINHVIEN_DIEMTHI" Member="SINHVIEN" ThisKey="MaSV" OtherKey="MaSV" Type="SINHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DSSV_HDCTXH" Member="DSSV_HDCTXHs">
+    <Type Name="DSSV_HDCTXH">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SINHVIEN_DSSV_HDCTXH" Member="SINHVIEN" ThisKey="MaSV" OtherKey="MaSV" Type="SINHVIEN" IsForeignKey="true" />
+      <Association Name="HDCTXH_DSSV_HDCTXH" Member="HDCTXH" ThisKey="MaHDCTXH" OtherKey="MaHDCTXH" Type="HDCTXH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HDCTXH" Member="HDCTXHs">
+    <Type Name="HDCTXH">
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHDCTXH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DoDiemCTXH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HDCTXH_DSSV_HDCTXH" Member="DSSV_HDCTXHs" ThisKey="MaHDCTXH" OtherKey="MaHDCTXH" Type="DSSV_HDCTXH" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spGetChuyenNganh" Method="spGetChuyenNganh">
+    <ElementType Name="spGetChuyenNganhResult">
+      <Column Name="MaChuyenNganh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuyenNganh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spXoaViPham" Method="spXoaViPham">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="noiDung" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="hinhthucKL" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngayVP" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetCNTheoKhoa" Method="spGetCNTheoKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetCNTheoKhoaResult">
+      <Column Name="MaChuyenNganh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuyenNganh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetCNTheoMaCN" Method="spGetCNTheoMaCN">
+    <Parameter Name="maCN" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetCNTheoMaCNResult">
+      <Column Name="MaChuyenNganh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuyenNganh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetDiemTB_SoTC" Method="spGetDiemTB_SoTC">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetDiemTB_SoTCResult">
+      <Column Name="DTB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetDiemTBTL_SoTCTL" Method="spGetDiemTBTL_SoTCTL">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetDiemTBTL_SoTCTLResult">
+      <Column Name="DTBTL" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SoTCTL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetDiemTheoMSSV_MaHP" Method="spGetDiemTheoMSSV_MaHP">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetDiemTheoMSSV_MaHPResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemGiuaKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DaDongHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetDSSVCanhBaoHV" Method="spGetDSSVCanhBaoHV">
+    <ElementType Name="spGetDSSVCanhBaoHVResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DTB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetGVTheoMaGV" Method="spGetGVTheoMaGV">
+    <Parameter Name="maGV" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetGVTheoMaGVResult">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThuocMaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocVi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetGVTheoMaKhoa" Method="spGetGVTheoMaKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetGVTheoMaKhoaResult">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ThuocMaKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocVi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHBGioi_NamHoc_HocKy" Method="spGetHBGioi_NamHoc_HocKy">
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetHBGioi_NamHoc_HocKyResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DTB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHBKha_NamHoc_HocKy" Method="spGetHBKha_NamHoc_HocKy">
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetHBKha_NamHoc_HocKyResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DTB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHBNhatLop_NamHoc_HocKy" Method="spGetHBNhatLop_NamHoc_HocKy">
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetHBNhatLop_NamHoc_HocKyResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DTB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spgetHDByMaHD" Method="spgetHDByMaHD">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spgetHDByMaHDResult">
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHDCTXH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoDiemCTXH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHDCTXHByMaSV" Method="spGetHDCTXHByMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetHDCTXHByMaSVResult">
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHDCTXH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoDiemCTXH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHDRLByMaHD" Method="spGetHDRLByMaHD">
+    <Parameter Name="MaHD" Parameter="maHD" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetHDRLByMaHDResult">
+      <Column Name="MaHDRL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHDRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoDiemRL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHDRLByMaSV_NamHoc_HocKy" Method="spGetHDRLByMaSV_NamHoc_HocKy">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetHDRLByMaSV_NamHoc_HocKyResult">
+      <Column Name="MaHDRL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHDRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayTC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoDiemRL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoThamGia" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHocKy" Method="spGetHocKy">
+    <ElementType Name="spGetHocKyResult">
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHPByMaSV" Method="spGetHPByMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetHPByMaSVResult">
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaDongHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHPTheoMaHP" Method="spGetHPTheoMaHP">
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetHPTheoMaHPResult">
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetHPTheoMH" Method="spGetHPTheoMH">
+    <Parameter Name="maMH" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetHPTheoMHResult">
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaMH_MH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetKhoa" Method="spGetKhoa">
+    <ElementType Name="spGetKhoaResult">
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SDTKhoa" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetKTheoMaKhoa" Method="spGetKTheoMaKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetKTheoMaKhoaResult">
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNKhoa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SDTKhoa" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetLop" Method="spGetLop">
+    <ElementType Name="spGetLopResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChuyenNganh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetLopTheoChuyenNganh" Method="spGetLopTheoChuyenNganh">
+    <Parameter Name="maCN" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetLopTheoChuyenNganhResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChuyenNganh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetLopTheoMaLop" Method="spGetLopTheoMaLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetLopTheoMaLopResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChuyenNganh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMHTheoMaMH" Method="spGetMHTheoMaMH">
+    <Parameter Name="maMH" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetMHTheoMaMHResult">
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMHTrongHP" Method="spGetMHTrongHP">
+    <ElementType Name="spGetMHTrongHPResult">
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMHTrongHPTheoGV" Method="spGetMHTrongHPTheoGV">
+    <Parameter Name="maGV" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetMHTrongHPTheoGVResult">
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMonHoc" Method="spGetMonHoc">
+    <ElementType Name="spGetMonHocResult">
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetNamHoc" Method="spGetNamHoc">
+    <ElementType Name="spGetNamHocResult">
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSiSoLop" Method="spGetSiSoLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSiSoLopResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVByMaCTXH" Method="spGetSVByMaCTXH">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSVByMaCTXHResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVByMaRL" Method="spGetSVByMaRL">
+    <Parameter Name="MaHD" Parameter="maHD" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSVByMaRLResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CoThamGia" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVByMaSV_MaHDCTXH" Method="spGetSVByMaSV_MaHDCTXH">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetSVByMaSV_MaHDCTXHResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVByMaSV_MaHDRL" Method="spGetSVByMaSV_MaHDRL">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSVByMaSV_MaHDRLResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="MaHD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CoThamGia" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVNoHocPhi" Method="spGetSVNoHocPhi">
+    <ElementType Name="spGetSVNoHocPhiResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TongNoHP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVTheoMaHP" Method="spGetSVTheoMaHP">
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSVTheoMaHPResult">
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DanToc" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DaDongHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVTheoMaLop" Method="spGetSVTheoMaLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetSVTheoMaLopResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DanToc" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVTheoMaSV" Method="spGetSVTheoMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetSVTheoMaSVResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DanToc" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetSVThieuDiemCTXH" Method="spGetSVThieuDiemCTXH">
+    <ElementType Name="spGetSVThieuDiemCTXHResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TongDiemCTXH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTaiKhoan" Method="spGetTaiKhoan">
+    <ElementType Name="spGetTaiKhoanResult">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTKTheoLoaiUser" Method="spGetTKTheoLoaiUser">
+    <Parameter Name="loaiUser" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetTKTheoLoaiUserResult">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTKTheoMa" Method="spGetTKTheoMa">
+    <Parameter Name="ma" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetTKTheoMaResult">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTKTheoTK" Method="spGetTKTheoTK">
+    <Parameter Name="user" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="spGetTKTheoTKResult">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTongDiemCongRLByMaSV_NamHoc_HocKy" Method="spGetTongDiemCongRLByMaSV_NamHoc_HocKy">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetTongDiemCongRLByMaSV_NamHoc_HocKyResult">
+      <Column Name="DiemCong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTongDiemHDCTXHByMaSV" Method="spGetTongDiemHDCTXHByMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetTongDiemHDCTXHByMaSVResult">
+      <Column Name="TongDiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTongDiemTruRLByMaSV_NamHoc_HocKy" Method="spGetTongDiemTruRLByMaSV_NamHoc_HocKy">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetTongDiemTruRLByMaSV_NamHoc_HocKyResult">
+      <Column Name="DiemTru" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTongNoHPByMaSV" Method="spGetTongNoHPByMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetTongNoHPByMaSVResult">
+      <Column Name="TongNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetUserByIDPass" Method="spGetUserByIDPass">
+    <Parameter Name="user" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pass" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spGetUserByIDPassResult">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetViPham" Method="spGetViPham">
+    <ElementType Name="spGetViPhamResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhThucKL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayViPham" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetVPByAllKey" Method="spGetVPByAllKey">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="noiDung" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="hinhthucKL" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngayVP" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="spGetVPByAllKeyResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhThucKL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayViPham" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetVPByMaSV" Method="spGetVPByMaSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetVPByMaSVResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhThucKL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayViPham" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spSuaChuyenNganh" Method="spSuaChuyenNganh">
+    <Parameter Name="maCN" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenChuyenNganh" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaCTXH" Method="spSuaCTXH">
+    <Parameter Name="MaHDCTXH" Parameter="maHDCTXH" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TenHDCTXH" Parameter="tenHDCTXH" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DiaDiem" Parameter="diaDiem" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NgayTC" Parameter="ngayTC" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SoDiemCTXH" Parameter="soDiemCTXH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaDiemThi" Method="spSuaDiemThi">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="diemGK" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="diemCK" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaGiangVien" Method="spSuaGiangVien">
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tengv" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thuocmakhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hocvi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="diachi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="sdt" Type="System.String" DbType="VarChar(11)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaHocPhan" Method="spSuaHocPhan">
+    <Parameter Name="mahp" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mamh" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hocky" Type="System.Int32" DbType="Int" />
+    <Parameter Name="namhoc" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sotc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="hocphi" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaKhoa" Method="spSuaKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenKhoa" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="truongKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="VarChar(11)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaLop" Method="spSuaLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="chuyenNganh" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaMonHoc" Method="spSuaMonHoc">
+    <Parameter Name="maMH" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenMH" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaRL" Method="spSuaRL">
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TenHDRL" Parameter="tenHDRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DiaDiem" Parameter="diaDiem" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NgayTC" Parameter="ngayTC" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SoDiemRL" Parameter="soDiemRL" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaSinhVien" Method="spSuaSinhVien">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="hoTen" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="danToc" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="queQuan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaTaiKhoan" Method="spSuaTaiKhoan">
+    <Parameter Name="maTk" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="matKhau" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="loaiUser" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSuaTinhTrangHP" Method="spSuaTinhTrangHP">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="daDongHP" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemChuyenNganh" Method="spThemChuyenNganh">
+    <Parameter Name="maCN" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenChuyenNganh" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemCTXH" Method="spThemCTXH">
+    <Parameter Name="MaHDCTXH" Parameter="maHDCTXH" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TenHDCTXH" Parameter="tenHDCTXH" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DiaDiem" Parameter="diaDiem" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NgayTC" Parameter="ngayTC" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SoDiemCTXH" Parameter="soDiemCTXH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemDiemThi" Method="spThemDiemThi">
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemDSSV_HDCTXH" Method="spThemDSSV_HDCTXH">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemDSSV_HDRL" Method="spThemDSSV_HDRL">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="coMat" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemGiangVien" Method="spThemGiangVien">
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tengv" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thuocmakhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hocvi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="diachi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="sdt" Type="System.String" DbType="VarChar(11)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemHocPhan" Method="spThemHocPhan">
+    <Parameter Name="mahp" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mamh" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hocky" Type="System.Int32" DbType="Int" />
+    <Parameter Name="namhoc" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sotc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="hocphi" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemKhoa" Method="spThemKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenKhoa" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="truongKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="VarChar(11)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemLop" Method="spThemLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="chuyenNganh" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemMonHoc" Method="spThemMonHoc">
+    <Parameter Name="maMH" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenMH" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemRL" Method="spThemRL">
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TenHDRL" Parameter="tenHDRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DiaDiem" Parameter="diaDiem" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NgayTC" Parameter="ngayTC" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="namHoc" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="hocKy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SoDiemRL" Parameter="soDiemRL" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemSinhVien" Method="spThemSinhVien">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="hoTen" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="danToc" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="queQuan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemTaiKhoan" Method="spThemTaiKhoan">
+    <Parameter Name="maTk" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="matKhau" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="loaiUser" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ma" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spThemViPham" Method="spThemViPham">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="noiDung" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="hinhthucKL" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngayVP" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaChuyenNganh" Method="spXoaChuyenNganh">
+    <Parameter Name="maCN" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaCTXH" Method="spXoaCTXH">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaDiemThi" Method="spXoaDiemThi">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="maHP" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaDSSV_HDCTXH" Method="spXoaDSSV_HDCTXH">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaDSSV_HDRL" Method="spXoaDSSV_HDRL">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaGiangVien" Method="spXoaGiangVien">
+    <Parameter Name="magv" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaHocPhan" Method="spXoaHocPhan">
+    <Parameter Name="mahp" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaKhoa" Method="spXoaKhoa">
+    <Parameter Name="maKhoa" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaLop" Method="spXoaLop">
+    <Parameter Name="maLop" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaMonHoc" Method="spXoaMonHoc">
+    <Parameter Name="maMH" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaRL" Method="spXoaRL">
+    <Parameter Name="MaHDRL" Parameter="maHDRL" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaSinhVien" Method="spXoaSinhVien">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spXoaTaiKhoan" Method="spXoaTaiKhoan">
+    <Parameter Name="maTk" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetMSSV" Method="spGetMSSV">
+    <ElementType Name="spGetMSSVResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetDiemTheoMSSV" Method="spGetDiemTheoMSSV">
+    <Parameter Name="maSV" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="spGetDiemTheoMSSVResult">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DanToc" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaHP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaMH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaDongHP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMaHDRL" Method="spGetMaHDRL">
+    <ElementType Name="spGetMaHDRLResult">
+      <Column Name="MaHDRL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMaHDCTXH" Method="spGetMaHDCTXH">
+    <ElementType Name="spGetMaHDCTXHResult">
+      <Column Name="MaHDCTXH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetMaGV" Method="spGetMaGV">
+    <ElementType Name="spGetMaGVResult">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
